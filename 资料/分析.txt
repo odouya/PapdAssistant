@@ -1,0 +1,37 @@
+文件路径：data/data/com.pingan.papd
+
+1./app_webview/Cookies
+//存储当前账号对应的cookie信息
+cookies表
+
+2./files/app.js
+存储相关接口和校验位的md5计算方法
+
+3./shared_prefs/log_status.xml
+//上次同步的数据
+<int name="lastSynStepCount" value="62180" />
+<float name="distance" value="47979.957" />//米
+<float name="calories" value="10866.627" />
+
+4./databases/papd.db
+//每小时存储的步数信息
+walkdata_hour表
+
+5.关于证书
+【证书密码】
+110110
+
+【证书名称规则】
+规则：
+OID.1.2.4.14.4.8.7.21.2=安卓版本|型号|IMEI|MAC地址||, OID.1.2.4.14.4.8.7.21.1=0, C=CN, S=Shanghai, L=Shanghai, O=PINGAN, OU=API, CN=didValue(未知规则)
+实例：
+OID.1.2.4.14.4.8.7.21.2=5.1  |MX5       |867246022861968|68:3e:34:1f:2c:7c||, OID.1.2.4.14.4.8.7.21.1=0, C=CN, S=Shanghai, L=Shanghai, O=PINGAN, OU=API, CN=849388721991
+OID.1.2.4.14.4.8.7.21.2=4.0.3|ZTE U930HD|868447011383183|f0:84:c9:ee:12:b9||, OID.1.2.4.14.4.8.7.21.1=0, C=CN, S=Shanghai, L=Shanghai, O=PINGAN, OU=API, CN=141340244116
+
+6.api.jk.cn.dtk文件
+存储的是device_token值
+
+7.cookie中
+_webDtk
+_tk，user_token
+_wtk，web_user_token

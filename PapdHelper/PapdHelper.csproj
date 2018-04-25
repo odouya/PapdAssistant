@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2453151-6CDF-4EF9-A092-31CE824A6412}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PapdLib</RootNamespace>
+    <AssemblyName>PapdHelper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\ThridParty\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpMethod.cs" />
+    <Compile Include="Info\AddressInfo.cs" />
+    <Compile Include="Info\CityInfo.cs" />
+    <Compile Include="Info\CreateOrderInfo.cs" />
+    <Compile Include="Info\CreateOrderInfoPara.cs" />
+    <Compile Include="Info\DistrictInfo.cs" />
+    <Compile Include="Info\FetchMapTreasureBoxResponse.cs" />
+    <Compile Include="Info\FriendRankings.cs" />
+    <Compile Include="Info\GenerateMapTrusureBoxResponse.cs" />
+    <Compile Include="Info\GoldInfo.cs" />
+    <Compile Include="Info\InviteCodeInfo.cs" />
+    <Compile Include="Info\InviteeInfo.cs" />
+    <Compile Include="Info\IsType.cs" />
+    <Compile Include="Info\OrderDetailInfo.cs" />
+    <Compile Include="Info\OrderInfo.cs" />
+    <Compile Include="Info\PajkCheckUpdateResult.cs" />
+    <Compile Include="Info\PajkCreateOrderResult.cs" />
+    <Compile Include="Info\PajkDoLotteryResult.cs" />
+    <Compile Include="Info\PajkDownloadWalkDataResult.cs" />
+    <Compile Include="Info\PajkFetchBoxResult.cs" />
+    <Compile Include="Info\PajkGetDepotResult.cs" />
+    <Compile Include="Info\PajkGetMyBoxDetail.cs" />
+    <Compile Include="Info\PajkGetMyBoxNum.cs" />
+    <Compile Include="Info\PajkGetSkus.cs" />
+    <Compile Include="Info\PajkLoginResult.cs" />
+    <Compile Include="Info\PajkPrizeItemInfo.cs" />
+    <Compile Include="Info\PajkRenewTkAndWtkResult.cs" />
+    <Compile Include="Info\PajkResult.cs" />
+    <Compile Include="Info\PajkStringValueResult.cs" />
+    <Compile Include="Info\PajkZaEggResult.cs" />
+    <Compile Include="Info\PlayBBCMResult.cs" />
+    <Compile Include="Info\PlayBBZCResult.cs" />
+    <Compile Include="Info\ProductDetail.cs" />
+    <Compile Include="Info\ProductInfo.cs" />
+    <Compile Include="Info\ProvinceInfo.cs" />
+    <Compile Include="Info\QueryGoldExpireInfoResponse.cs" />
+    <Compile Include="Info\RankingInfo.cs" />
+    <Compile Include="Info\RankingInfoLite.cs" />
+    <Compile Include="Info\RewardInfo.cs" />
+    <Compile Include="Info\RewardRecordInfo.cs" />
+    <Compile Include="Info\SellerInfo.cs" />
+    <Compile Include="Info\StateInfoItem.cs" />
+    <Compile Include="Info\StateInfo.cs" />
+    <Compile Include="Info\UserInfo.cs" />
+    <Compile Include="Info\UserInfoLite.cs" />
+    <Compile Include="PajkMethods.cs" />
+    <Compile Include="PapdHelper.cs" />
+    <Compile Include="ParaCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Info\GameSignatureInfo.cs" />
+    <Compile Include="Util\CertificateUtil.cs" />
+    <Compile Include="Util\CookieUtil.cs" />
+    <Compile Include="Util\UrlConverter.cs" />
+    <Compile Include="UserStateException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Json信息类说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

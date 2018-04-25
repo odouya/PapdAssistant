@@ -1,0 +1,11 @@
+﻿1.long、int、enum：默认为 0
+2.string、class：默认为null，例如string需要调整为string.empty
+3.bool：默认为false
+4.数组：默认为null，例如需要调整为：new string[0];
+5.将信息类对象序列化为json时，字段的顺序
+---首先字段类型在前，属性类型在后
+---其次按字段定义顺序
+建议：
+都是用字段或属性类型（更倾心于字段类型）
+6.注意请求中Content-Type中的编码类型以及postdata转字节数组时的编码类型
+否则会出现400

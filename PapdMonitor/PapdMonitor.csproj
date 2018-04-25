@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3494CB8F-6464-4FAC-A5FD-5B1AE598DE83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PapdMonitor</RootNamespace>
+    <AssemblyName>PapdMonitor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_launcher.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FiddlerCore3dot5">
+      <HintPath>..\ThridParty\FiddlerCoreAPI\FiddlerCore3dot5.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\ThridParty\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConfigInfo.cs" />
+    <Compile Include="ConfigStorage.cs" />
+    <Compile Include="FiddlerTest.cs" />
+    <Compile Include="FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBatchHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBatchHandle.Designer.cs">
+      <DependentUpon>FrmBatchHandle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFetchBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFetchBox.Designer.cs">
+      <DependentUpon>FrmFetchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGameCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGameCenter.Designer.cs">
+      <DependentUpon>FrmGameCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHttpProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHttpProxy.Designer.cs">
+      <DependentUpon>FrmHttpProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImageVerifyCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImageVerifyCode.Designer.cs">
+      <DependentUpon>FrmImageVerifyCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInviteTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInviteTip.Designer.cs">
+      <DependentUpon>FrmInviteTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInputText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInputText.Designer.cs">
+      <DependentUpon>FrmInputText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmList.Designer.cs">
+      <DependentUpon>FrmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLottery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLottery.Designer.cs">
+      <DependentUpon>FrmLottery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMyBoxDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMyBoxDetail.Designer.cs">
+      <DependentUpon>FrmMyBoxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrderDetail.Designer.cs">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProxy.designer.cs">
+      <DependentUpon>FrmProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectAddress.Designer.cs">
+      <DependentUpon>FrmSelectAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectProvince.Designer.cs">
+      <DependentUpon>FrmSelectProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStepDataGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStepDataGen.Designer.cs">
+      <DependentUpon>FrmStepDataGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStepManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStepManager.Designer.cs">
+      <DependentUpon>FrmStepManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInputPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInputPhone.Designer.cs">
+      <DependentUpon>FrmInputPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocation.Designer.cs">
+      <DependentUpon>FrmLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditAddress.Designer.cs">
+      <DependentUpon>FrmEditAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductDetail.Designer.cs">
+      <DependentUpon>FrmProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQRCode.Designer.cs">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectCity.Designer.cs">
+      <DependentUpon>FrmSelectCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateOrder.Designer.cs">
+      <DependentUpon>FrmCreateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTextEncode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTextEncode.Designer.cs">
+      <DependentUpon>FrmTextEncode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewPic.Designer.cs">
+      <DependentUpon>FrmViewPic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeb.Designer.cs">
+      <DependentUpon>FrmWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalContext.cs" />
+    <Compile Include="ItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemControl.Designer.cs">
+      <DependentUpon>ItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewFz.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MobileTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutputEventArgs.cs" />
+    <Compile Include="Util\AntiCode.cs" />
+    <Compile Include="Util\ApiUtil.cs" />
+    <Compile Include="Util\ConsoleHelper.cs" />
+    <Compile Include="Util\ImageHelper.cs" />
+    <Compile Include="Util\Logger.cs" />
+    <Compile Include="Util\MsgBox.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\StringTool.cs" />
+    <Compile Include="WindowInfo.cs" />
+    <EmbeddedResource Include="FrmBatchHandle.resx">
+      <DependentUpon>FrmBatchHandle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFetchBox.resx">
+      <DependentUpon>FrmFetchBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGameCenter.resx">
+      <DependentUpon>FrmGameCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHttpProxy.resx">
+      <DependentUpon>FrmHttpProxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImageVerifyCode.resx">
+      <DependentUpon>FrmImageVerifyCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInviteTip.resx">
+      <DependentUpon>FrmInviteTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInputText.resx">
+      <DependentUpon>FrmInputText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmList.resx">
+      <DependentUpon>FrmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLottery.resx">
+      <DependentUpon>FrmLottery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMyBoxDetail.resx">
+      <DependentUpon>FrmMyBoxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrderDetail.resx">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProxy.resx">
+      <DependentUpon>FrmProxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectAddress.resx">
+      <DependentUpon>FrmSelectAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectProvince.resx">
+      <DependentUpon>FrmSelectProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStepDataGen.resx">
+      <DependentUpon>FrmStepDataGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStepManager.resx">
+      <DependentUpon>FrmStepManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInputPhone.resx">
+      <DependentUpon>FrmInputPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocation.resx">
+      <DependentUpon>FrmLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditAddress.resx">
+      <DependentUpon>FrmEditAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductDetail.resx">
+      <DependentUpon>FrmProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQRCode.resx">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectCity.resx">
+      <DependentUpon>FrmSelectCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateOrder.resx">
+      <DependentUpon>FrmCreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTextEncode.resx">
+      <DependentUpon>FrmTextEncode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewPic.resx">
+      <DependentUpon>FrmViewPic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeb.resx">
+      <DependentUpon>FrmWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemControl.resx">
+      <DependentUpon>ItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileTextBox.resx">
+      <DependentUpon>MobileTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\papd.cds" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PapdHelper\PapdHelper.csproj">
+      <Project>{C2453151-6CDF-4EF9-A092-31CE824A6412}</Project>
+      <Name>PapdHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1671BGV697Z1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ic_launcher.ico" />
+    <None Include="Resources\ic_launcher.png" />
+    <EmbeddedResource Include="map.htm" />
+    <EmbeddedResource Include="Resources\game_步步成名.jpg" />
+    <EmbeddedResource Include="Resources\game_步步为赢.jpg" />
+    <EmbeddedResource Include="Resources\game_步步竞猜.jpg" />
+    <EmbeddedResource Include="Resources\game_步步招财.jpg" />
+    <None Include="Resources\fetch.ico" />
+    <None Include="Resources\mobile_proxy.gif" />
+    <None Include="Resources\2016122411040048.png" />
+    <Content Include="XML配置文件模板.txt" />
+    <Content Include="功能描述.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+1、安装fiddler
+2、安装FiddlerCertMaker
+3、设置fiddler，HTTPS和Connections项
+4、手机上安装证书
